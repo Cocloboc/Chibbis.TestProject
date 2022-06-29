@@ -22,13 +22,13 @@ namespace Chibbis.TestProject.ProductManagementService.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(CreateProductCommand command, CancellationToken token)
+        public async Task<ProductMinified> CreateProduct(CreateProductCommand command, CancellationToken token)
         {
-            await _mediator
+            var response = await _mediator
                 .CreateRequestClient<CreateProductCommand>()
                 .GetResponse<CreateProductCommandResponse>(command, token);
 
-            return Ok();
+            return response.Message.Data;
         }
         
         [HttpPut]

@@ -18,16 +18,13 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Services
             _redisClient = redisClient;
         }
 
-        public async Task CreateProductAsync(Product product)
+        public async Task<int> CreateProductAsync(Product product)
         {
-            var oldProduct = await GetProductAsync(product.Id);
-
-            if (oldProduct != null)
-            {
-                throw new HasDuplicateExceptions(Errors.ProductHasDuplicate(product.Id));
-            }
-
+            product.Id = await GetIdAsync();
+            
             await _redisClient.GetDefaultDatabase().AddAsync(GetKey(product.Id), product);
+
+            return product.Id;
         }
 
         public async Task UpdateProductAsync(Product product)
@@ -89,6 +86,19 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Services
         private List<string> GetKeys(IEnumerable<int> ids)
         {
             return ids.Select(id => $"{_prefix}:{id}").ToList();
+        }
+
+        private async Task<int> GetIdAsync()
+        {
+            var key = $"{_prefix}_id";
+            
+            var lastId = await _redisClient.GetDefaultDatabase()
+                .GetAsync<int>(key);
+
+            await _redisClient.GetDefaultDatabase()
+                .AddAsync(key, ++lastId);
+
+            return lastId;
         }
     }
 }

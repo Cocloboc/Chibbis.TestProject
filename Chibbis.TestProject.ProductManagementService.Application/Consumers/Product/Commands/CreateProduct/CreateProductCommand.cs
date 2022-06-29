@@ -4,13 +4,12 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Consumers.Pro
 {
     public record CreateProductCommand
     {
-        public int Id { get; init; }
         public string Name { get; init; }
         public decimal Cost { get; init; }
         public bool ForBonusPoints { get; init; }
     }
 
-    public record CreateProductCommandResponse : CommandResponse
+    public record CreateProductCommandResponse : CommandResponseLoaded<ProductMinified>
     {
         
     }

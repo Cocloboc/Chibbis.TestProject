@@ -6,8 +6,6 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Consumers.Pro
     {
         public CreateProductCommandValidator()
         {
-            RuleFor(x => x.Id)
-                .NotEmpty();
             RuleFor(x => x.Name)
                 .NotEmpty();
             RuleFor(x => x.Cost)

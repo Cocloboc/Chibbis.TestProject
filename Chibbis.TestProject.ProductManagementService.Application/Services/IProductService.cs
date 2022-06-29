@@ -6,7 +6,7 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Services
 {
     public interface IProductService
     {
-        Task CreateProductAsync(Product product);
+        Task<int> CreateProductAsync(Product product);
         Task UpdateProductAsync(Product product);
         Task DeleteProductAsync(int productId);
         Task<Product> GetProductAsync(int id);

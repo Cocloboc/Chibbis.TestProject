@@ -9,7 +9,7 @@ using StackExchange.Redis.Extensions.Core.Abstractions;
 
 namespace Chibbis.TestProject.ProductManagementService.Application.Consumers.Product.Commands.CreateProduct
 {
-    public class CreateProductCommandConsumer: IConsumer<CreateProductCommand>
+    public class CreateProductCommandConsumer : IConsumer<CreateProductCommand>
     {
         private ILogger<CreateProductCommandConsumer> _logger;
         private readonly IProductService _productService;
@@ -31,15 +31,16 @@ namespace Chibbis.TestProject.ProductManagementService.Application.Consumers.Pro
             try
             {
                 var product = _mapper.Map<Entities.Product>(command);
-                await _productService.CreateProductAsync(product);
+                var productId = await _productService.CreateProductAsync(product);
+                var productMinified = new ProductMinified() {Id = productId};
+
+                await context.RespondAsync(new CreateProductCommandResponse() {Data = productMinified});
             }
             catch (Exception e)
             {
                 _logger.LogError($"We have some errors:{e.Message}", e);
                 throw;
             }
-
-            await context.RespondAsync(new CreateProductCommandResponse());
         }
     }
 }
