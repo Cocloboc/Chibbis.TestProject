@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Chibbis.TestProject.ProductManagementService.Application;
 using Chibbis.TestProject.ProductManagementService.Application.Consumers.Product.Commands.CreateProduct;
 using Chibbis.TestProject.ProductManagementService.Web.Extensions;
+using Chibbis.TestProject.ProductManagementService.Web.Middlewares;
 using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
@@ -46,7 +47,7 @@ namespace Chibbis.TestProject.ProductManagementService.Web
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.ConfigureExceptionHandler();
+            app.UseMiddleware<ExceptionMiddleware>();
             if (env.IsDevelopment())
             {
                 app.UseSwagger();
