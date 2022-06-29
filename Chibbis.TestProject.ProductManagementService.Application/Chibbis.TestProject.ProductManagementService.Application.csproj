@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Chibbis.TestProject.Contracts\Chibbis.TestProject.Contracts.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
+      <PackageReference Include="FluentValidation" Version="11.1.0" />
+      <PackageReference Include="MassTransit" Version="8.0.3" />
+      <PackageReference Include="StackExchange.Redis.Extensions.AspNetCore" Version="8.0.5" />
+      <PackageReference Include="StackExchange.Redis.Extensions.Newtonsoft" Version="8.0.5" />
+    </ItemGroup>
+
+</Project>

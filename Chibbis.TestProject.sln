@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chibbis.TestProject.CartService.Web", "Chibbis.TestProject.CartService.Web\Chibbis.TestProject.CartService.Web.csproj", "{CEA1AE33-1898-4E9C-9071-8DB2A808B8FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chibbis.TestProject.CartService.Application", "Chibbis.TestProject.CartService.Application\Chibbis.TestProject.CartService.Application.csproj", "{61B5D552-7E61-4517-B899-147B3F91B4C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chibbis.TestProject.Contracts", "Chibbis.TestProject.Contracts\Chibbis.TestProject.Contracts.csproj", "{161DF3C9-5579-4215-B141-E1F2C8FAAE52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chibbis.TestProject.ProductManagementService.Application", "Chibbis.TestProject.ProductManagementService.Application\Chibbis.TestProject.ProductManagementService.Application.csproj", "{1E5182F2-4A80-4999-B6A9-37542557B4A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chibbis.TestProject.ProductManagementService.Web", "Chibbis.TestProject.ProductManagementService.Web\Chibbis.TestProject.ProductManagementService.Web.csproj", "{9199BD56-0211-4272-9152-DB003FE95D5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA1AE33-1898-4E9C-9071-8DB2A808B8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA1AE33-1898-4E9C-9071-8DB2A808B8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA1AE33-1898-4E9C-9071-8DB2A808B8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA1AE33-1898-4E9C-9071-8DB2A808B8FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B5D552-7E61-4517-B899-147B3F91B4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B5D552-7E61-4517-B899-147B3F91B4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B5D552-7E61-4517-B899-147B3F91B4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B5D552-7E61-4517-B899-147B3F91B4C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161DF3C9-5579-4215-B141-E1F2C8FAAE52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161DF3C9-5579-4215-B141-E1F2C8FAAE52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161DF3C9-5579-4215-B141-E1F2C8FAAE52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161DF3C9-5579-4215-B141-E1F2C8FAAE52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5182F2-4A80-4999-B6A9-37542557B4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5182F2-4A80-4999-B6A9-37542557B4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5182F2-4A80-4999-B6A9-37542557B4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5182F2-4A80-4999-B6A9-37542557B4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9199BD56-0211-4272-9152-DB003FE95D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9199BD56-0211-4272-9152-DB003FE95D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9199BD56-0211-4272-9152-DB003FE95D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9199BD56-0211-4272-9152-DB003FE95D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
